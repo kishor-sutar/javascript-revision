@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="exercise-title">DOM Exercise</h1>
+    <button id = "btn">Click Me</button>
+
+    <p id="para" >This is paragraph one.</p>
+    <script>
+        const title = document.getElementById("exercise-title");
+        const button = document.getElementById("btn");
+        const paragraphOne = document.getElementById("para");
+        console.log(title); 
+        console.log(paragraphOne);
+
+        title.style.color = "blue";
+
+       
+
+
+        button.addEventListener("click", function () {
+            title.innerText = "Button was clicked!";
+                    title.style.color = "red";
+            
+            paragraphOne.innerText = paragraphOne.innerText + " - Modified by JS";
+        
+        });
+
+
+
+    </script>
+    
+</body>
+</html>

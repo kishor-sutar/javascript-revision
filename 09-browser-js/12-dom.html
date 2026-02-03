@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Basics</title>
+</head>
+<body>
+
+  <h1 id="title">Hello DOM</h1>
+
+  <button id="btn">Click Me</button>
+
+  <p class="text">Paragraph 1</p>
+  <p class="text">Paragraph 2</p>
+
+  <script>
+    // --------------------
+    // Selecting elements
+    // --------------------
+
+    const title = document.getElementById("title");
+    const button = document.getElementById("btn");
+    const paragraphs = document.querySelectorAll(".text");
+
+    console.log(title);
+    console.log(paragraphs);
+
+    // --------------------
+    // Changing content
+    // --------------------
+
+    title.innerText = "DOM Modified by JS";
+
+    // --------------------
+    // Handling events
+    // --------------------
+
+    button.addEventListener("click", function () {
+      title.innerText = "Button Clicked";
+    });
+
+  </script>
+
+</body>
+</html>
